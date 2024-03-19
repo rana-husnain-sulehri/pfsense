@@ -1180,6 +1180,7 @@ pkg_chroot_add() {
 
 	local _target="${1}"
 	local _pkg="$(get_pkg_name ${2}).txz"
+    cp /root/thingzeye_conf/build_packages/All/${_pkg} ${CORE_PKG_ALL_PATH}/
 
 	if [ ! -d "${_target}" ]; then
 		echo ">>> ERROR: Target dir ${_target} not found"
